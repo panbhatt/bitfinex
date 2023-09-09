@@ -28,5 +28,5 @@ setInterval(function () {
 
 service.on('request', (rid, key, payload, handler) => {
   console.log(payload) //  { msg: 'hello' }
-  handler.reply(null, { msg: 'world' })
+  handler.reply(null, { msg: 'Your message is -> ' + payload.msg });
 });
